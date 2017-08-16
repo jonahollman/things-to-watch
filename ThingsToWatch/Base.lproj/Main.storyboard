@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wlz-PN-ffG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Things to Watch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThingsToWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-8d-EUZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="57" id="VLm-cN-61Y" customClass="ListTableViewCell" customModule="ThingsToWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VLm-cN-61Y" id="iqz-T0-9vX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hD8-65-e88">
+                                                    <rect key="frame" x="15" y="8" width="177" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="Jxt-x9-63S"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HOM-cE-vZF">
+                                                    <rect key="frame" x="320" y="8" width="47" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="33v-W0-NOH"/>
+                                                        <constraint firstAttribute="height" constant="41" id="4dw-U8-z2p"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8u-9g-BXf">
+                                                    <rect key="frame" x="219" y="18" width="65" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0sa-QT-fzp"/>
+                                                        <constraint firstAttribute="width" constant="65" id="FrK-V8-oz8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q8u-9g-BXf" firstAttribute="leading" secondItem="hD8-65-e88" secondAttribute="trailing" constant="27" id="40P-7L-XNS"/>
+                                                <constraint firstAttribute="trailing" secondItem="HOM-cE-vZF" secondAttribute="trailing" constant="8" id="Kq5-4M-iXL"/>
+                                                <constraint firstItem="HOM-cE-vZF" firstAttribute="leading" secondItem="Q8u-9g-BXf" secondAttribute="trailing" constant="36" id="T5Z-EK-6av"/>
+                                                <constraint firstItem="Q8u-9g-BXf" firstAttribute="top" secondItem="iqz-T0-9vX" secondAttribute="topMargin" constant="10" id="TFP-0E-KtC"/>
+                                                <constraint firstItem="hD8-65-e88" firstAttribute="top" secondItem="iqz-T0-9vX" secondAttribute="top" constant="8" id="YmT-FR-LYB"/>
+                                                <constraint firstItem="hD8-65-e88" firstAttribute="leading" secondItem="iqz-T0-9vX" secondAttribute="leading" constant="15" id="hkv-Zp-YaH"/>
+                                                <constraint firstItem="HOM-cE-vZF" firstAttribute="top" secondItem="iqz-T0-9vX" secondAttribute="top" constant="8" id="kIv-7b-H7M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationImage" destination="HOM-cE-vZF" id="hFP-Sc-Zbe"/>
+                                            <outlet property="titleLabel" destination="hD8-65-e88" id="31i-nI-3a9"/>
+                                            <outlet property="typeLabel" destination="Q8u-9g-BXf" id="4hy-k9-hDX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U4U-8d-EUZ" secondAttribute="bottom" id="Wm2-pG-587"/>
+                            <constraint firstAttribute="trailing" secondItem="U4U-8d-EUZ" secondAttribute="trailing" id="fzG-ni-X06"/>
+                            <constraint firstItem="U4U-8d-EUZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u5Z-Kt-I5H"/>
+                            <constraint firstItem="U4U-8d-EUZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="zDD-Fw-N7h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Things to Watch" id="owG-MF-fWz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w3d-Vs-d1z">
+                            <connections>
+                                <segue destination="gXs-A7-dBt" kind="show" id="fvL-Ck-7dN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="U4U-8d-EUZ" id="ika-65-kk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="137.18140929535232"/>
+        </scene>
+        <!--Add New-->
+        <scene sceneID="8WE-4X-Eur">
+            <objects>
+                <viewController title="Add New" id="gXs-A7-dBt" customClass="AddItemViewController" customModule="ThingsToWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1qc-56-gW0"/>
+                        <viewControllerLayoutGuide type="bottom" id="hYe-wD-A65"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="loq-jm-lgo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-DX-ZWd">
+                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" returnKeyType="done"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hme-8A-naT">
+                                <rect key="frame" x="96.5" y="153" width="182" height="29"/>
+                                <segments>
+                                    <segment title="Netflix"/>
+                                    <segment title="HBOGo"/>
+                                    <segment title="iTunes"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-nO-6Mg">
+                                <rect key="frame" x="118.5" y="220" width="137" height="29"/>
+                                <segments>
+                                    <segment title="Movie"/>
+                                    <segment title="TV Show"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hc3-BB-uCR">
+                                <rect key="frame" x="144.5" y="315.5" width="86" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Add To List"/>
+                                <connections>
+                                    <action selector="addToList:" destination="gXs-A7-dBt" eventType="touchUpInside" id="iPX-dK-QZz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Frc-DX-ZWd" firstAttribute="trailing" secondItem="loq-jm-lgo" secondAttribute="trailingMargin" id="9JK-aw-kAu"/>
+                            <constraint firstItem="Frc-DX-ZWd" firstAttribute="leading" secondItem="loq-jm-lgo" secondAttribute="leadingMargin" id="F5a-9K-IRK"/>
+                            <constraint firstItem="hme-8A-naT" firstAttribute="centerX" secondItem="loq-jm-lgo" secondAttribute="centerX" id="J7v-iZ-UmX"/>
+                            <constraint firstItem="Odm-nO-6Mg" firstAttribute="top" secondItem="hme-8A-naT" secondAttribute="bottom" constant="39" id="VQP-L4-RFS"/>
+                            <constraint firstItem="Hc3-BB-uCR" firstAttribute="centerX" secondItem="loq-jm-lgo" secondAttribute="centerX" id="ZWp-Bd-id9"/>
+                            <constraint firstItem="hme-8A-naT" firstAttribute="top" secondItem="Frc-DX-ZWd" secondAttribute="bottom" constant="39" id="hHk-iO-1mA"/>
+                            <constraint firstItem="Frc-DX-ZWd" firstAttribute="top" secondItem="1qc-56-gW0" secondAttribute="bottom" constant="20" id="pkB-8N-HwI"/>
+                            <constraint firstItem="Odm-nO-6Mg" firstAttribute="centerX" secondItem="loq-jm-lgo" secondAttribute="centerX" id="r9F-aB-Czc"/>
+                            <constraint firstItem="Hc3-BB-uCR" firstAttribute="centerY" secondItem="loq-jm-lgo" secondAttribute="centerY" id="xO9-JQ-2lG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationSelector" destination="hme-8A-naT" id="c0S-rI-nzm"/>
+                        <outlet property="titleTextField" destination="Frc-DX-ZWd" id="VF7-rQ-N9S"/>
+                        <outlet property="typeSelector" destination="Odm-nO-6Mg" id="5M3-84-ars"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKc-td-Pl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.5999999999999" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kge-A3-mjx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wlz-PN-ffG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KA3-zV-mec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Uyq-K1-Zih"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s90-8E-ph3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202.40000000000001" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+</document>
